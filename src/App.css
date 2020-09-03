@@ -1,38 +1,122 @@
 .App {
-  text-align: center;
+   text-align: center;
+   background-color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text{
+   position: absolute;
+   margin-left: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Circle{
+	height: 45px;
+	width: 45px;
+	border-radius:35px;
+	-webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+	box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+   z-index: 1;
+}
+
+.Pallete{
+   height: 45px;
+   width: 45px;
+   border-radius:35px;
+   -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+   box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+   z-index: 1;
+   margin-left: -93%;
+}
+
+.CircleBody{
+	width: 50px;
+   height:250px;
+   box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+   margin-top: -20%;
+   margin-left: 83%;
+	border-radius:35px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+   font-family: 'Rubik', sans-serif;
+   background-color: #110b99;
+   min-height: 50%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: 220%;
+   color: white;
+   margin-bottom: 3%;
+}
+
+.Box{
+   border: 3px solid #000000;
+   font-size: 70px;
+   width:140px;
+   display:inline-grid;
+   background-color: #ffffff;
+   justify-content: center;
+   align-items: center;
+   height: 140px;
+   margin-top: -7px;
+}
+
+.Multiplayer{
+   float:right;
+   margin-top: 50px;
+   height: 45px;
+   width: 45px;
+   border-radius:35px;
+   -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+   box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+   z-index: 1;
+
 }
 
 .App-link {
   color: #61dafb;
 }
+@media only screen and (max-width: 600px) {
+   .Box{
+      border: 3px solid #000000;
+      font-size: 40px;
+      width:80px;
+      display:inline-grid;
+      background-color: #ffffff;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      margin-top: -7px;
+   }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+   .text{
+      position: absolute;
+      margin-left: 23px;
+      margin-top: 10px;
+   }
+
+   .CircleBody{
+   	width: 35px;
+      height:180px;
+      box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+      float:left;
+      margin-left: 16px;
+      margin-top: 43px;
+      margin-right:-16px;
+   	border-radius:35px;
+   }
+
+   .Circle{
+   	height: 30px;
+   	width: 30px;
+   	border-radius:35px;
+   	-webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+   	box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+      float:left;
+      margin-left: 4%;
+      margin-right:-4%;
+      position:relative;
+      z-index: 1;
+      align-items: flex-end;
+   }
 }
