@@ -15,8 +15,7 @@ function App() {
    const [scoreX, setscoreX] = useState(0);
    const [scoreO, setscoreO] = useState(0);
    const [player2, setplayer2] = useState(' ');
-
-var alternate=0;
+   const [alternate,setalternate] = useState(0);
 
    const choice = (i) =>{
       setdisable(true)
@@ -107,15 +106,15 @@ var alternate=0;
 
      return (
        <div className="App">
-         <div className="App-header">Tic Tack Toe</div>
+         <div className="App-header">Tic Tac Toe</div>
          <p>
-         <button  className="Pallete" style={{background:"#1055e0"}} type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-             <FontAwesomeIcon icon={faPalette } size="lg" style={{color:"white"}}/>
+         <button  className="Pallete" style={{background:"#1055e0"}} type="button" data-toggle="collapse" data-target="#collapseExample">
+             <FontAwesomeIcon icon={faPalette} size="sm" style={{color:"white"}}/>
          </button>
          </p>
-         <div class="collapse" id="collapseExample" style={{position:"absolute"}}>
+         <div class="collapse" id="collapseExample" style={{position:"absolute",left:"0"}}>
            <div class="CircleBody">
-               <button className="Circle"  onClick={() => setcolourPicker("#bf0906")} style={{background:"#bf0906"}}></button><br/><br/>
+               <button className="Circle" onClick={() => setcolourPicker("#bf0906")} style={{background:"#bf0906"}}></button><br/><br/>
                <button className="Circle" onClick={() => setcolourPicker("#249900")} style={{background:"#249900"}}></button><br/><br/>
                <button className="Circle" onClick={() => setcolourPicker("#e09900")} style={{background:"#e09900"}}></button><br/><br/>
                <button className="Circle" onClick={() => setcolourPicker("#5d0da3")} style={{background:"#5d0da3"}}></button><br/><br/>
@@ -123,12 +122,12 @@ var alternate=0;
          </div>
 
          <p>
-         <button  className="Circle"  style={{background:"#0ea5b3",float:"right"}} type="button" data-toggle="collapse" data-target="#collapseExample2">
-             <FontAwesomeIcon icon={faUser} size="lg" style={{color:"white"}}/>
+         <button  className="User" style={{background:"#0ea5b3"}} type="button" data-toggle="collapse" data-target="#collapseExample2">
+             <FontAwesomeIcon icon={faUser} size="sm" style={{color:"white"}}/>
          </button>
          </p>
-         <div class="collapse" id="collapseExample2"  style={{position:"absolute"}}>
-               <button className="Circle" class="Multiplayer" onClick={() => setplayer2("yes") } style={{background:"#bf0906",marginleft:"50px"}}><FontAwesomeIcon icon={faUsers} size="lg" style={{color:"white"}}/></button><br/><br/>
+         <div class="collapse" id="collapseExample2" style={{position:"absolute",right:"0"}}>
+               <button className="Multiplayer"  onClick={() => setplayer2("yes") } style={{background:"#bf0906"}}><FontAwesomeIcon icon={faUsers} size="sm" style={{color:"white"}}/></button><br/><br/>
          </div>
 
          {!disable?
@@ -145,13 +144,12 @@ var alternate=0;
             <br/><button type="button" class="btn btn-light btn-lg" style={{fontSize:25,color:"#1055e0",borderBottom: "3px solid #1055e0"}}> X : &nbsp; &nbsp; &nbsp; &nbsp; {scoreX}</button>
             <button type="button" class="btn btn-light" style={{fontSize:25,color:"#0ea5b3",borderBottom: "3px solid #0ea5b3"}}>O : &nbsp; &nbsp; &nbsp; &nbsp; {scoreO}</button>
          </ButtonGroup>
-         {console.log(alternate),
-            console.log(array)}
+
          <br/><br/><br/>
          {
             array.map((item,index)=>
                <div style={{display:'inline'}}>
-                  <div className="Box" onClick={()=>{if(result===" " && player2==="yes"){alternate % 2===0?choice():choice2() }; alternate = alternate+ 1;}} style={boxGrid(index)}>
+                  <div className="Box" onClick={()=>{if(result===" " && player2==="yes"){alternate % 2===0?choice(index):choice2(index) }else{choice(index)}; setalternate(alternate+ 1);}} style={boxGrid(index)}>
                      <div className="text" style={p1===item?{color:colourPicker}:{color:colourPicker2}}>{item}</div>
                   </div>
                   <br style={index%3===2?{display:'block'}:{display:'none'}}/>
@@ -159,8 +157,6 @@ var alternate=0;
             )
          }
          <br/>
-         {console.log(alternate)}
-
          { result!==" "?<div class="alert alert-success" style={{fontSize:25}} role="alert">{result}</div>:null }
          <Button variant="outline-primary" onClick={()=>{setarray([" "," "," "," "," "," "," "," "," "]); setresult(" ");}}>Play Again</Button>{' '}
          <Button variant="outline-info" onClick={() => window.location.reload(false)}>Restart Game</Button>{' '}

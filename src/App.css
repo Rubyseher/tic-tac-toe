@@ -16,23 +16,31 @@
 	box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
    z-index: 1;
 }
-
-.Pallete{
+.User{
+   float:right;
+   margin-top: -1.5%;
    height: 45px;
    width: 45px;
    border-radius:35px;
    -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
    box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
-   z-index: 1;
-   margin-left: -93%;
+}
+
+.Pallete{
+   float: left;
+   margin-top: -1%;
+   height: 45px;
+   width: 45px;
+   border-radius:35px;
+   -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+   box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
 }
 
 .CircleBody{
 	width: 50px;
    height:250px;
    box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
-   margin-top: -20%;
-   margin-left: 83%;
+   margin-top: 55px;
 	border-radius:35px;
 }
 
@@ -49,6 +57,15 @@
    margin-bottom: 3%;
 }
 
+.Multiplayer{
+   margin-top: 55px;
+   height: 45px;
+   width: 45px;
+   border-radius:35px;
+   -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+   box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+}
+
 .Box{
    border: 3px solid #000000;
    font-size: 70px;
@@ -59,18 +76,6 @@
    align-items: center;
    height: 140px;
    margin-top: -7px;
-}
-
-.Multiplayer{
-   float:right;
-   margin-top: 50px;
-   height: 45px;
-   width: 45px;
-   border-radius:35px;
-   -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
-   box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
-   z-index: 1;
-
 }
 
 .App-link {
@@ -100,10 +105,36 @@
       height:180px;
       box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
       float:left;
-      margin-left: 16px;
-      margin-top: 43px;
-      margin-right:-16px;
+      margin-top: 45px;
    	border-radius:35px;
+   }
+
+   .Multiplayer{
+      margin-top: 45px;
+      height: 30px;
+      width: 30px;
+      border-radius:35px;
+      -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+      box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+   }
+   .User{
+      float:right;
+      margin-top: -2%;
+      height: 30px;
+      width: 30px;
+      border-radius:35px;
+      -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+      box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+   }
+
+   .Pallete{
+      float: left;
+      margin-top: -1%;
+      height: 30px;
+      width: 30px;
+      border-radius:35px;
+      -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
+      box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.51);
    }
 
    .Circle{
